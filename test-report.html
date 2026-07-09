@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Retour #RT-018 — RemontTest</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="app-wrapper">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <a href="dashboard.html" class="sidebar-brand">
+      <span class="brand-icon"><i class="bi bi-check2-circle"></i></span>
+      <span>RemontTest</span>
+    </a>
+    <div class="sidebar-section-label">Principal</div>
+    <ul class="sidebar-nav">
+      <li><a href="dashboard.html"><i class="bi bi-grid-1x2 nav-icon"></i><span>Tableau de bord</span></a></li>
+      <li><a href="projects.html"><i class="bi bi-folder2 nav-icon"></i><span>Projets</span></a></li>
+      <li><a href="clients.html"><i class="bi bi-people nav-icon"></i><span>Clients</span></a></li>
+    </ul>
+    <div class="sidebar-section-label">Rapports</div>
+    <ul class="sidebar-nav">
+      <li><a href="test-report.html" class="active"><i class="bi bi-bug nav-icon"></i><span>Retours reçus</span></a></li>
+      <li><a href="#"><i class="bi bi-bar-chart-line nav-icon"></i><span>Statistiques</span></a></li>
+    </ul>
+    <div class="sidebar-section-label">Compte</div>
+    <ul class="sidebar-nav">
+      <li><a href="#"><i class="bi bi-gear nav-icon"></i><span>Paramètres</span></a></li>
+      <li><a href="login.html"><i class="bi bi-box-arrow-left nav-icon"></i><span>Déconnexion</span></a></li>
+    </ul>
+    <div class="sidebar-footer">
+      <div class="d-flex align-items-center gap-2">
+        <div class="avatar" style="width:28px;height:28px;font-size:.7rem;">JD</div>
+        <div><div style="font-size:.75rem;color:#e2e8f0;">Jean Dupont</div><div style="font-size:.65rem;color:#64748b;">Plan Pro</div></div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main-content">
+    <header class="topbar">
+      <div class="topbar-title" style="display:flex;align-items:center;gap:8px;flex:1;">
+        <a href="project-detail.html" class="text-muted" style="font-size:.875rem;text-decoration:none;">
+          <i class="bi bi-chevron-left me-1"></i>Site e-commerce
+        </a>
+        <span class="text-muted">/</span>
+        <span style="font-size:.875rem;font-weight:600;color:#1e293b;">#RT-018 — Bouton Commander</span>
+      </div>
+      <div class="topbar-actions">
+        <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-chevron-up me-1"></i>Précédent</button>
+        <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-chevron-down me-1"></i>Suivant</button>
+        <button class="btn btn-sm btn-outline-secondary btn-icon"><i class="bi bi-bell"></i></button>
+        <div class="avatar">JD</div>
+      </div>
+    </header>
+
+    <div class="page-body">
+      <div class="row g-4">
+
+        <!-- =====================
+             LEFT — Main content
+        ===================== -->
+        <div class="col-lg-8">
+
+          <!-- Report header -->
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="d-flex align-items-start gap-3">
+                <div>
+                  <div class="d-flex align-items-center gap-2 mb-2 flex-wrap">
+                    <span style="font-size:.75rem;color:#64748b;font-weight:600;">#RT-018</span>
+                    <span class="status-badge badge-blocker">Bloqué</span>
+                    <span class="badge bg-danger">Critique</span>
+                    <span class="badge bg-light text-dark border"><i class="bi bi-folder2 me-1"></i>Site e-commerce</span>
+                  </div>
+                  <h4 style="font-weight:700;color:#1e293b;margin-bottom:8px;">
+                    Le bouton "Commander" ne fonctionne pas sur mobile
+                  </h4>
+                  <div class="d-flex align-items-center gap-4 flex-wrap" style="font-size:.8rem;color:#64748b;">
+                    <span><i class="bi bi-person me-1"></i>Remontée par <strong>Sophie Martin</strong></span>
+                    <span><i class="bi bi-clock me-1"></i>Il y a 2 heures</span>
+                    <span><i class="bi bi-display me-1"></i>iPhone 14 · Safari 17</span>
+                    <span><i class="bi bi-globe me-1"></i>Page : /cart/checkout</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Description (WYSIWYG rendered content) -->
+          <div class="card mb-4">
+            <div class="card-header"><i class="bi bi-text-paragraph me-2 text-primary"></i>Description du retour</div>
+            <div class="card-body">
+              <div style="font-size:.875rem;line-height:1.7;color:#374151;">
+                <p>Lors de mon test sur iPhone 14 avec Safari, j'ai constaté que le bouton <strong>"Commander"</strong> sur la page de récapitulatif du panier ne réagit pas au clic.</p>
+                <p>Voici les étapes pour reproduire le problème :</p>
+                <ol>
+                  <li>Ouvrir le site sur Safari (iOS 17.4)</li>
+                  <li>Ajouter un article au panier</li>
+                  <li>Accéder à la page de récapitulatif (<code>/cart/checkout</code>)</li>
+                  <li>Appuyer sur le bouton <strong>"Commander"</strong></li>
+                </ol>
+                <p><strong>Résultat attendu :</strong> Redirection vers la page de paiement.<br />
+                <strong>Résultat obtenu :</strong> Rien ne se passe. Le bouton semble inactif.</p>
+                <p>Le problème ne se reproduit pas sur Chrome mobile ni sur Desktop.</p>
+                <blockquote style="border-left:3px solid #e2e8f0;padding-left:12px;color:#64748b;margin:12px 0;">
+                  Ce problème est bloquant pour la recette finale prévue vendredi.
+                </blockquote>
+              </div>
+            </div>
+          </div>
+
+          <!-- Screenshots -->
+          <div class="card mb-4">
+            <div class="card-header d-flex align-items-center justify-content-between">
+              <span><i class="bi bi-images me-2 text-primary"></i>Captures d'écran <span class="badge bg-secondary ms-1">2</span></span>
+              <button class="btn btn-sm btn-outline-primary"><i class="bi bi-plus me-1"></i>Ajouter</button>
+            </div>
+            <div class="card-body">
+              <div class="screenshot-grid">
+                <!-- Screenshot 1 — mock -->
+                <div class="screenshot-thumb" style="width:160px;height:110px;">
+                  <div style="width:100%;height:100%;background:linear-gradient(135deg,#e2e8f0,#cbd5e1);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;">
+                    <i class="bi bi-phone" style="font-size:1.8rem;color:#94a3b8;"></i>
+                    <span style="font-size:.65rem;color:#64748b;">iPhone 14 · Safari</span>
+                  </div>
+                  <div class="thumb-delete"><i class="bi bi-x"></i></div>
+                </div>
+                <!-- Screenshot 2 — mock -->
+                <div class="screenshot-thumb" style="width:160px;height:110px;">
+                  <div style="width:100%;height:100%;background:linear-gradient(135deg,#fef3c7,#fde68a);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;">
+                    <i class="bi bi-cart-x" style="font-size:1.8rem;color:#92400e;"></i>
+                    <span style="font-size:.65rem;color:#92400e;">Bouton inactif</span>
+                  </div>
+                  <div class="thumb-delete"><i class="bi bi-x"></i></div>
+                </div>
+                <!-- Upload zone -->
+                <div class="upload-zone" style="width:160px;height:110px;padding:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;">
+                  <i class="bi bi-cloud-upload" style="font-size:1.4rem;color:#94a3b8;"></i>
+                  <span style="font-size:.7rem;color:#94a3b8;">Ajouter</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comments thread -->
+          <div class="card mb-4">
+            <div class="card-header"><i class="bi bi-chat-left-dots me-2 text-primary"></i>Commentaires <span class="badge bg-secondary ms-1">3</span></div>
+            <div class="card-body">
+
+              <!-- Comment 1 -->
+              <div class="comment-item">
+                <div class="avatar" style="background:#8b5cf6;flex-shrink:0;">SM</div>
+                <div class="comment-body">
+                  <div class="comment-meta">
+                    <strong>Sophie Martin</strong> <span class="badge bg-light text-dark border ms-1">Client</span>
+                    <span class="ms-2">Il y a 2h</span>
+                  </div>
+                  <div class="comment-text">
+                    J'ai aussi testé avec Firefox sur iPhone — même résultat. Le problème est bien côté Safari/iOS uniquement selon ce que j'ai pu tester.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Comment 2 -->
+              <div class="comment-item">
+                <div class="avatar" style="flex-shrink:0;">JD</div>
+                <div class="comment-body">
+                  <div class="comment-meta">
+                    <strong>Jean Dupont</strong> <span class="badge bg-primary bg-opacity-10 text-primary ms-1">Développeur</span>
+                    <span class="ms-2">Il y a 1h</span>
+                  </div>
+                  <div class="comment-text">
+                    Merci Sophie, je reproduis bien le problème. Il semble que le handler JavaScript du bouton ne se lie pas correctement sur les versions iOS &lt; 17.5. Je travaille sur un fix.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Comment 3 -->
+              <div class="comment-item">
+                <div class="avatar" style="background:#8b5cf6;flex-shrink:0;">SM</div>
+                <div class="comment-body">
+                  <div class="comment-meta">
+                    <strong>Sophie Martin</strong> <span class="badge bg-light text-dark border ms-1">Client</span>
+                    <span class="ms-2">Il y a 30 min</span>
+                  </div>
+                  <div class="comment-text">
+                    Super, merci pour la réactivité ! Je retest dès que le fix est déployé.
+                  </div>
+                </div>
+              </div>
+
+              <!-- New comment WYSIWYG -->
+              <div class="mt-4">
+                <div class="d-flex gap-3">
+                  <div class="avatar" style="flex-shrink:0;">JD</div>
+                  <div class="flex-grow-1">
+                    <div class="wysiwyg-toolbar">
+                      <button type="button" class="btn"><b>G</b></button>
+                      <button type="button" class="btn"><em>I</em></button>
+                      <button type="button" class="btn"><u>S</u></button>
+                      <button type="button" class="btn"><i class="bi bi-list-ul"></i></button>
+                      <button type="button" class="btn"><i class="bi bi-list-ol"></i></button>
+                      <button type="button" class="btn"><i class="bi bi-link45deg"></i></button>
+                      <button type="button" class="btn"><i class="bi bi-image"></i></button>
+                      <button type="button" class="btn"><i class="bi bi-code"></i></button>
+                      <button type="button" class="btn"><i class="bi bi-quote"></i></button>
+                    </div>
+                    <div class="wysiwyg-content" contenteditable="true">
+                      Ajouter un commentaire…
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between mt-2 gap-2">
+                      <div class="d-flex gap-2">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">
+                          <i class="bi bi-paperclip me-1"></i>Joindre un fichier
+                        </button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">
+                          <i class="bi bi-camera me-1"></i>Capture d'écran
+                        </button>
+                      </div>
+                      <button type="button" class="btn btn-sm btn-primary">
+                        <i class="bi bi-send me-1"></i>Envoyer
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- New feedback form (client view) -->
+          <div class="card">
+            <div class="card-header" style="background:#f8fafc;">
+              <i class="bi bi-plus-circle me-2 text-success"></i>Soumettre un nouveau retour
+              <span class="badge bg-success bg-opacity-10 text-success ms-2">Vue client</span>
+            </div>
+            <div class="card-body">
+              <form novalidate>
+
+                <div class="mb-3">
+                  <label class="form-label" for="fb-title">Titre du retour <span class="text-danger">*</span></label>
+                  <input id="fb-title" type="text" class="form-control"
+                         placeholder="Ex : Le formulaire de contact ne s'envoie pas" required />
+                </div>
+
+                <div class="row g-3 mb-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="fb-priority">Priorité</label>
+                    <select id="fb-priority" class="form-select">
+                      <option>Normale</option>
+                      <option>Basse</option>
+                      <option>Haute</option>
+                      <option>Critique</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="fb-page">Page / URL concernée</label>
+                    <input id="fb-page" type="text" class="form-control" placeholder="/contact" />
+                  </div>
+                </div>
+
+                <div class="row g-3 mb-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="fb-browser">Navigateur</label>
+                    <select id="fb-browser" class="form-select">
+                      <option>Chrome</option>
+                      <option>Firefox</option>
+                      <option>Safari</option>
+                      <option>Edge</option>
+                      <option>Autre</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="fb-device">Appareil</label>
+                    <select id="fb-device" class="form-select">
+                      <option>Desktop</option>
+                      <option>Mobile</option>
+                      <option>Tablette</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Description <span class="text-danger">*</span></label>
+                  <div class="wysiwyg-toolbar">
+                    <button type="button" class="btn"><b>G</b></button>
+                    <button type="button" class="btn"><em>I</em></button>
+                    <button type="button" class="btn"><u>S</u></button>
+                    <button type="button" class="btn"><i class="bi bi-list-ul"></i></button>
+                    <button type="button" class="btn"><i class="bi bi-list-ol"></i></button>
+                    <button type="button" class="btn"><i class="bi bi-link45deg"></i></button>
+                    <button type="button" class="btn"><i class="bi bi-image"></i></button>
+                    <button type="button" class="btn"><i class="bi bi-code"></i></button>
+                    <button type="button" class="btn"><i class="bi bi-quote"></i></button>
+                  </div>
+                  <div class="wysiwyg-content" contenteditable="true" style="min-height:120px;">
+                    Décrivez le problème, les étapes pour le reproduire, le résultat attendu et le résultat obtenu…
+                  </div>
+                </div>
+
+                <!-- Upload zone -->
+                <div class="mb-3">
+                  <label class="form-label">Captures d'écran / Fichiers joints</label>
+                  <div class="upload-zone">
+                    <div class="upload-icon"><i class="bi bi-cloud-upload"></i></div>
+                    <p><strong>Glissez-déposez</strong> vos fichiers ici, ou <a href="#">cliquez pour parcourir</a></p>
+                    <p style="font-size:.75rem;">PNG, JPG, GIF, PDF — max 10 Mo par fichier</p>
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-end">
+                  <button type="submit" class="btn btn-success px-4">
+                    <i class="bi bi-send me-2"></i>Soumettre ce retour
+                  </button>
+                </div>
+
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- =====================
+             RIGHT — Sidebar meta
+        ===================== -->
+        <div class="col-lg-4">
+
+          <!-- Status actions -->
+          <div class="card mb-4">
+            <div class="card-header"><i class="bi bi-sliders me-2"></i>Gestion du retour</div>
+            <div class="card-body d-grid gap-2">
+              <select class="form-select">
+                <option>🔴 Bloqué</option>
+                <option>🟡 Ouvert</option>
+                <option>🔵 En cours</option>
+                <option>🟣 En revue</option>
+                <option>🟢 Résolu</option>
+              </select>
+              <select class="form-select">
+                <option>🔴 Critique</option>
+                <option>🟠 Haute</option>
+                <option>🟡 Normale</option>
+                <option>⚪ Basse</option>
+              </select>
+              <select class="form-select">
+                <option>Assigner à…</option>
+                <option selected>Jean Dupont (moi)</option>
+                <option>Marie Leclerc</option>
+                <option>Paul Simon</option>
+              </select>
+              <button class="btn btn-success">
+                <i class="bi bi-check-circle me-2"></i>Marquer comme résolu
+              </button>
+              <button class="btn btn-outline-secondary btn-sm">
+                <i class="bi bi-archive me-1"></i>Archiver
+              </button>
+            </div>
+          </div>
+
+          <!-- Metadata -->
+          <div class="card mb-4">
+            <div class="card-header"><i class="bi bi-info-circle me-2"></i>Détails</div>
+            <div class="card-body">
+              <table style="width:100%;font-size:.8rem;">
+                <tr>
+                  <td style="color:#64748b;padding:5px 0;width:50%;">Projet</td>
+                  <td><a href="project-detail.html">Site e-commerce</a></td>
+                </tr>
+                <tr>
+                  <td style="color:#64748b;padding:5px 0;">Client</td>
+                  <td>Boutique ABC</td>
+                </tr>
+                <tr>
+                  <td style="color:#64748b;padding:5px 0;">Soumis par</td>
+                  <td>Sophie Martin</td>
+                </tr>
+                <tr>
+                  <td style="color:#64748b;padding:5px 0;">Créé le</td>
+                  <td>09/07/2024 10:14</td>
+                </tr>
+                <tr>
+                  <td style="color:#64748b;padding:5px 0;">Mis à jour</td>
+                  <td>09/07/2024 12:05</td>
+                </tr>
+                <tr>
+                  <td style="color:#64748b;padding:5px 0;">Navigateur</td>
+                  <td>Safari 17</td>
+                </tr>
+                <tr>
+                  <td style="color:#64748b;padding:5px 0;">Appareil</td>
+                  <td>iPhone 14</td>
+                </tr>
+                <tr>
+                  <td style="color:#64748b;padding:5px 0;">OS</td>
+                  <td>iOS 17.4</td>
+                </tr>
+                <tr>
+                  <td style="color:#64748b;padding:5px 0;">URL</td>
+                  <td><code style="font-size:.75rem;">/cart/checkout</code></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <!-- Labels -->
+          <div class="card mb-4">
+            <div class="card-header d-flex align-items-center justify-content-between">
+              <span><i class="bi bi-tag me-2"></i>Étiquettes</span>
+              <button class="btn btn-sm btn-outline-secondary btn-icon" title="Ajouter"><i class="bi bi-plus"></i></button>
+            </div>
+            <div class="card-body d-flex flex-wrap gap-1">
+              <span class="badge bg-danger bg-opacity-10 text-danger">bug</span>
+              <span class="badge bg-warning bg-opacity-10 text-warning">mobile</span>
+              <span class="badge bg-primary bg-opacity-10 text-primary">safari</span>
+              <span class="badge bg-secondary bg-opacity-10 text-secondary">checkout</span>
+            </div>
+          </div>
+
+          <!-- Activity log -->
+          <div class="card">
+            <div class="card-header"><i class="bi bi-clock-history me-2"></i>Historique</div>
+            <div class="card-body">
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-dot blue"></div>
+                  <div class="timeline-text">Retour créé par <strong>Sophie M.</strong></div>
+                  <div class="timeline-date">09/07/2024 10:14</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot orange"></div>
+                  <div class="timeline-text">Statut → <strong>Bloqué</strong> par Jean D.</div>
+                  <div class="timeline-date">09/07/2024 10:30</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot blue"></div>
+                  <div class="timeline-text">Assigné à <strong>Jean Dupont</strong></div>
+                  <div class="timeline-date">09/07/2024 10:31</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot green"></div>
+                  <div class="timeline-text">Priorité → <strong>Critique</strong></div>
+                  <div class="timeline-date">09/07/2024 11:00</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tableau de bord — RemontTest</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="app-wrapper">
+
+  <!-- ==============================
+       SIDEBAR
+  ============================== -->
+  <aside class="sidebar">
+    <a href="dashboard.html" class="sidebar-brand">
+      <span class="brand-icon"><i class="bi bi-check2-circle"></i></span>
+      <span>RemontTest</span>
+    </a>
+
+    <div class="sidebar-section-label">Principal</div>
+    <ul class="sidebar-nav">
+      <li>
+        <a href="dashboard.html" class="active">
+          <i class="bi bi-grid-1x2 nav-icon"></i>
+          <span>Tableau de bord</span>
+        </a>
+      </li>
+      <li>
+        <a href="projects.html">
+          <i class="bi bi-folder2 nav-icon"></i>
+          <span>Projets</span>
+        </a>
+      </li>
+      <li>
+        <a href="clients.html">
+          <i class="bi bi-people nav-icon"></i>
+          <span>Clients</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="sidebar-section-label">Rapports</div>
+    <ul class="sidebar-nav">
+      <li>
+        <a href="test-report.html">
+          <i class="bi bi-bug nav-icon"></i>
+          <span>Retours reçus</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bi bi-bar-chart-line nav-icon"></i>
+          <span>Statistiques</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="sidebar-section-label">Compte</div>
+    <ul class="sidebar-nav">
+      <li>
+        <a href="#">
+          <i class="bi bi-gear nav-icon"></i>
+          <span>Paramètres</span>
+        </a>
+      </li>
+      <li>
+        <a href="login.html">
+          <i class="bi bi-box-arrow-left nav-icon"></i>
+          <span>Déconnexion</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="sidebar-footer">
+      <div class="d-flex align-items-center gap-2">
+        <div class="avatar" style="width:28px;height:28px;font-size:.7rem;">JD</div>
+        <div>
+          <div style="font-size:.75rem;color:#e2e8f0;">Jean Dupont</div>
+          <div style="font-size:.65rem;color:#64748b;">Plan Pro</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==============================
+       MAIN CONTENT
+  ============================== -->
+  <div class="main-content">
+
+    <!-- Topbar -->
+    <header class="topbar">
+      <div class="topbar-title">Tableau de bord</div>
+      <div class="topbar-actions">
+        <button class="btn btn-sm btn-outline-secondary btn-icon" title="Notifications">
+          <i class="bi bi-bell"></i>
+        </button>
+        <div class="dropdown">
+          <button class="btn p-0 border-0" data-bs-toggle="dropdown">
+            <div class="avatar">JD</div>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+            <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i>Mon profil</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-gear me-2"></i>Paramètres</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item text-danger" href="login.html"><i class="bi bi-box-arrow-left me-2"></i>Déconnexion</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page body -->
+    <div class="page-body">
+
+      <!-- Welcome banner -->
+      <div class="alert mb-4" style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #bfdbfe;border-radius:10px;">
+        <div class="d-flex align-items-center gap-3">
+          <i class="bi bi-sun" style="font-size:1.5rem;color:#2563eb;"></i>
+          <div>
+            <strong>Bonjour Jean 👋</strong>
+            <div style="font-size:.875rem;color:#374151;">Vous avez <strong>3 retours</strong> en attente de traitement et <strong>1 projet</strong> proche de la date de livraison.</div>
+          </div>
+          <a href="projects.html" class="btn btn-sm btn-primary ms-auto">Voir les projets</a>
+        </div>
+      </div>
+
+      <!-- Stat cards -->
+      <div class="row g-3 mb-4">
+        <div class="col-6 col-lg-3">
+          <div class="stat-card blue">
+            <div class="stat-label"><i class="bi bi-folder2 me-1"></i>Projets actifs</div>
+            <div class="stat-value">12</div>
+            <div class="stat-sub">+2 ce mois-ci</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="stat-card green">
+            <div class="stat-label"><i class="bi bi-check-circle me-1"></i>Tests résolus</div>
+            <div class="stat-value">47</div>
+            <div class="stat-sub">+8 cette semaine</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="stat-card orange">
+            <div class="stat-label"><i class="bi bi-hourglass-split me-1"></i>En attente</div>
+            <div class="stat-value">8</div>
+            <div class="stat-sub">3 prioritaires</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="stat-card red">
+            <div class="stat-label"><i class="bi bi-people me-1"></i>Clients actifs</div>
+            <div class="stat-value">6</div>
+            <div class="stat-sub">2 invitations en attente</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- Recent projects -->
+        <div class="col-lg-8">
+          <div class="card">
+            <div class="card-header d-flex align-items-center justify-content-between">
+              <span><i class="bi bi-folder2 me-2 text-primary"></i>Projets récents</span>
+              <a href="projects.html" class="btn btn-sm btn-outline-primary">Voir tout</a>
+            </div>
+            <div class="card-body p-0">
+              <table class="table table-custom mb-0">
+                <thead>
+                  <tr>
+                    <th>Projet</th>
+                    <th>Client</th>
+                    <th>Statut</th>
+                    <th>Avancement</th>
+                    <th>Retours</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div style="font-weight:600;color:#1e293b;">Site e-commerce</div>
+                      <div style="font-size:.75rem;color:#64748b;">Mis à jour il y a 2h</div>
+                    </td>
+                    <td><span class="badge bg-light text-dark border">Boutique ABC</span></td>
+                    <td><span class="status-badge badge-progress">En cours</span></td>
+                    <td style="min-width:120px;">
+                      <div class="progress progress-thin mb-1"><div class="progress-bar bg-primary" style="width:65%;"></div></div>
+                      <small class="text-muted">65%</small>
+                    </td>
+                    <td><span class="badge bg-warning text-dark">3</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div style="font-weight:600;color:#1e293b;">Application mobile</div>
+                      <div style="font-size:.75rem;color:#64748b;">Mis à jour hier</div>
+                    </td>
+                    <td><span class="badge bg-light text-dark border">Tech Corp</span></td>
+                    <td><span class="status-badge badge-review">En revue</span></td>
+                    <td style="min-width:120px;">
+                      <div class="progress progress-thin mb-1"><div class="progress-bar bg-info" style="width:88%;"></div></div>
+                      <small class="text-muted">88%</small>
+                    </td>
+                    <td><span class="badge bg-danger">5</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div style="font-weight:600;color:#1e293b;">Dashboard analytics</div>
+                      <div style="font-size:.75rem;color:#64748b;">Mis à jour il y a 3j</div>
+                    </td>
+                    <td><span class="badge bg-light text-dark border">DataViz SAS</span></td>
+                    <td><span class="status-badge badge-todo">À faire</span></td>
+                    <td style="min-width:120px;">
+                      <div class="progress progress-thin mb-1"><div class="progress-bar bg-warning" style="width:20%;"></div></div>
+                      <small class="text-muted">20%</small>
+                    </td>
+                    <td><span class="badge bg-secondary">0</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div style="font-weight:600;color:#1e293b;">Refonte CRM</div>
+                      <div style="font-size:.75rem;color:#64748b;">Livré le 01/06/2024</div>
+                    </td>
+                    <td><span class="badge bg-light text-dark border">MediaGroup</span></td>
+                    <td><span class="status-badge badge-done">Terminé</span></td>
+                    <td style="min-width:120px;">
+                      <div class="progress progress-thin mb-1"><div class="progress-bar bg-success" style="width:100%;"></div></div>
+                      <small class="text-muted">100%</small>
+                    </td>
+                    <td><span class="badge bg-success">0</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Activity feed -->
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-header">
+              <i class="bi bi-activity me-2 text-success"></i>Activité récente
+            </div>
+            <div class="card-body">
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-dot blue"></div>
+                  <div class="timeline-text">Sophie (Boutique ABC) a ajouté un retour sur <strong>Site e-commerce</strong></div>
+                  <div class="timeline-date">Il y a 2h</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot green"></div>
+                  <div class="timeline-text">Retour #14 marqué comme <strong>Résolu</strong></div>
+                  <div class="timeline-date">Il y a 5h</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot orange"></div>
+                  <div class="timeline-text">Marc (Tech Corp) a commenté le retour #11</div>
+                  <div class="timeline-date">Hier 16:22</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot blue"></div>
+                  <div class="timeline-text">Nouveau projet <strong>Dashboard analytics</strong> créé</div>
+                  <div class="timeline-date">Il y a 3j</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot red"></div>
+                  <div class="timeline-text">Retour #9 marqué comme <strong>Bloqué</strong></div>
+                  <div class="timeline-date">Il y a 4j</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick actions -->
+          <div class="card mt-4">
+            <div class="card-header"><i class="bi bi-lightning me-2 text-warning"></i>Actions rapides</div>
+            <div class="card-body d-grid gap-2">
+              <a href="project-add.html" class="btn btn-primary btn-sm">
+                <i class="bi bi-plus-circle me-2"></i>Nouveau projet
+              </a>
+              <a href="client-add.html" class="btn btn-outline-primary btn-sm">
+                <i class="bi bi-person-plus me-2"></i>Ajouter un client
+              </a>
+              <a href="test-report.html" class="btn btn-outline-secondary btn-sm">
+                <i class="bi bi-eye me-2"></i>Voir les retours
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /row -->
+
+    </div><!-- /page-body -->
+  </div><!-- /main-content -->
+</div><!-- /app-wrapper -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
