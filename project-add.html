@@ -196,6 +196,122 @@
                   </div>
                 </div>
 
+                <hr />
+
+                <div class="mb-4">
+                  <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2">
+                    <div>
+                      <label class="form-label mb-1">Facturation & devis</label>
+                      <div class="form-text mb-0">Ajoutez ici le prix, l'acompte et le suivi des paiements du projet.</div>
+                    </div>
+                    <div class="form-check form-switch mb-0">
+                      <input type="checkbox" class="form-check-input" id="billing-enabled" checked />
+                      <label class="form-check-label" for="billing-enabled">Suivi de facturation activé</label>
+                    </div>
+                  </div>
+
+                  <div class="row g-3 mb-3">
+                    <div class="col-md-6">
+                      <div class="card h-100 bg-light">
+                        <div class="card-body">
+                          <div class="row g-3">
+                            <div class="col-12">
+                              <label class="form-label" for="billing-type">Type de devis</label>
+                              <select id="billing-type" class="form-select">
+                                <option selected>Forfait</option>
+                                <option>Régie</option>
+                                <option>Abonnement</option>
+                                <option>Prestation ponctuelle</option>
+                              </select>
+                            </div>
+                            <div class="col-12">
+                              <label class="form-label" for="billing-amount">Montant total</label>
+                              <div class="input-group">
+                                <span class="input-group-text">€</span>
+                                <input id="billing-amount" type="number" class="form-control" value="5000" />
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <label class="form-label" for="billing-deposit">Acompte (%)</label>
+                              <input id="billing-deposit" type="number" class="form-control" value="30" />
+                            </div>
+                            <div class="col-md-6">
+                              <label class="form-label" for="billing-due">Échéance finale</label>
+                              <input id="billing-due" type="date" class="form-control" value="2024-09-30" />
+                            </div>
+                            <div class="col-12">
+                              <label class="form-label" for="billing-note">Notes de facturation</label>
+                              <textarea id="billing-note" class="form-control" rows="3"
+                                placeholder="Ex : paiement en 3 fois, acompte avant démarrage, solde à la livraison…"></textarea>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div>
+                              <div class="fw-semibold text-dark">Répartition des paiements</div>
+                              <small class="text-muted">Statique — aperçu du calendrier de règlement</small>
+                            </div>
+                            <span class="badge bg-primary bg-opacity-10 text-primary">3 échéances</span>
+                          </div>
+                          <div class="table-responsive">
+                            <table class="table table-sm align-middle mb-0">
+                              <thead>
+                                <tr>
+                                  <th>Phase</th>
+                                  <th>Montant</th>
+                                  <th>Statut</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Acompte initial</td>
+                                  <td>1 500 €</td>
+                                  <td><span class="badge bg-success">Payé</span></td>
+                                </tr>
+                                <tr>
+                                  <td>Validation maquette</td>
+                                  <td>2 000 €</td>
+                                  <td><span class="badge bg-warning text-dark">En attente</span></td>
+                                </tr>
+                                <tr>
+                                  <td>Solde final</td>
+                                  <td>1 500 €</td>
+                                  <td><span class="badge bg-secondary">À facturer</span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card border-0 bg-primary bg-opacity-10">
+                    <div class="card-body">
+                      <div class="row g-3">
+                        <div class="col-md-4">
+                          <div class="text-muted small">Total devis</div>
+                          <div class="fw-bold fs-5 text-dark">5 000 €</div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="text-muted small">Déjà encaissé</div>
+                          <div class="fw-bold fs-5 text-success">1 500 €</div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="text-muted small">Reste à recevoir</div>
+                          <div class="fw-bold fs-5 text-warning">3 500 €</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <div class="d-flex gap-3 justify-content-end">
                   <a href="projects.html" class="btn btn-outline-secondary px-4">Annuler</a>
                   <button type="button" class="btn btn-outline-primary px-4">Enregistrer brouillon</button>
