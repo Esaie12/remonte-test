@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ajouter un client — RemontTest</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="app-wrapper">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <a href="dashboard.html" class="sidebar-brand">
+      <span class="brand-icon"><i class="bi bi-check2-circle"></i></span>
+      <span>RemontTest</span>
+    </a>
+    <div class="sidebar-section-label">Principal</div>
+    <ul class="sidebar-nav">
+      <li><a href="dashboard.html"><i class="bi bi-grid-1x2 nav-icon"></i><span>Tableau de bord</span></a></li>
+      <li><a href="projects.html"><i class="bi bi-folder2 nav-icon"></i><span>Projets</span></a></li>
+      <li><a href="clients.html" class="active"><i class="bi bi-people nav-icon"></i><span>Clients</span></a></li>
+    </ul>
+    <div class="sidebar-section-label">Rapports</div>
+    <ul class="sidebar-nav">
+      <li><a href="test-report.html"><i class="bi bi-bug nav-icon"></i><span>Retours reçus</span></a></li>
+      <li><a href="#"><i class="bi bi-bar-chart-line nav-icon"></i><span>Statistiques</span></a></li>
+    </ul>
+    <div class="sidebar-section-label">Compte</div>
+    <ul class="sidebar-nav">
+      <li><a href="#"><i class="bi bi-gear nav-icon"></i><span>Paramètres</span></a></li>
+      <li><a href="login.html"><i class="bi bi-box-arrow-left nav-icon"></i><span>Déconnexion</span></a></li>
+    </ul>
+    <div class="sidebar-footer">
+      <div class="d-flex align-items-center gap-2">
+        <div class="avatar" style="width:28px;height:28px;font-size:.7rem;">JD</div>
+        <div><div style="font-size:.75rem;color:#e2e8f0;">Jean Dupont</div><div style="font-size:.65rem;color:#64748b;">Plan Pro</div></div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main-content">
+    <header class="topbar">
+      <div class="topbar-title">
+        <a href="clients.html" class="text-muted me-2" style="font-size:.875rem;text-decoration:none;">
+          <i class="bi bi-chevron-left me-1"></i>Clients
+        </a>
+        / Ajouter un client
+      </div>
+      <div class="topbar-actions">
+        <button class="btn btn-sm btn-outline-secondary btn-icon"><i class="bi bi-bell"></i></button>
+        <div class="avatar">JD</div>
+      </div>
+    </header>
+
+    <div class="page-body">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col-xl-7">
+
+          <div class="card">
+            <div class="card-header"><i class="bi bi-person-plus me-2 text-primary"></i>Nouveau client</div>
+            <div class="card-body">
+              <form novalidate>
+
+                <!-- Avatar preview -->
+                <div class="text-center mb-4">
+                  <div class="avatar" style="width:72px;height:72px;font-size:1.6rem;margin:0 auto 12px;background:#8b5cf6;">?</div>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">
+                    <i class="bi bi-camera me-1"></i>Choisir un logo
+                  </button>
+                </div>
+
+                <div class="row g-3 mb-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="cli-firstname">Prénom du contact <span class="text-danger">*</span></label>
+                    <input id="cli-firstname" type="text" class="form-control" placeholder="Sophie" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="cli-lastname">Nom du contact <span class="text-danger">*</span></label>
+                    <input id="cli-lastname" type="text" class="form-control" placeholder="Martin" required />
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label" for="cli-company">Société / Organisation <span class="text-danger">*</span></label>
+                  <div class="input-group">
+                    <span class="input-group-text bg-light border-end-0"><i class="bi bi-building text-muted"></i></span>
+                    <input id="cli-company" type="text" class="form-control border-start-0 ps-0"
+                           placeholder="Boutique ABC" required />
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label" for="cli-email">Adresse e-mail <span class="text-danger">*</span></label>
+                  <div class="input-group">
+                    <span class="input-group-text bg-light border-end-0"><i class="bi bi-envelope text-muted"></i></span>
+                    <input id="cli-email" type="email" class="form-control border-start-0 ps-0"
+                           placeholder="sophie@boutiqueabc.fr" required />
+                  </div>
+                  <div class="form-text">Un e-mail d'invitation sera envoyé à cette adresse.</div>
+                </div>
+
+                <div class="row g-3 mb-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="cli-phone">Téléphone</label>
+                    <div class="input-group">
+                      <span class="input-group-text bg-light border-end-0"><i class="bi bi-telephone text-muted"></i></span>
+                      <input id="cli-phone" type="tel" class="form-control border-start-0 ps-0"
+                             placeholder="+33 6 12 34 56 78" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="cli-lang">Langue</label>
+                    <select id="cli-lang" class="form-select">
+                      <option value="fr" selected>Français</option>
+                      <option value="en">English</option>
+                      <option value="es">Español</option>
+                      <option value="de">Deutsch</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="mb-4">
+                  <label class="form-label" for="cli-note">Notes internes</label>
+                  <textarea id="cli-note" class="form-control" rows="2"
+                    placeholder="Informations utiles sur ce client (non visibles par le client)…"></textarea>
+                </div>
+
+                <hr />
+
+                <!-- Project association -->
+                <div class="mb-4">
+                  <label class="form-label">Associer à un projet existant</label>
+                  <div class="d-flex flex-column gap-2">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="p1" />
+                      <label class="form-check-label" for="p1" style="font-size:.875rem;">
+                        <i class="bi bi-folder2 text-primary me-1"></i>Site e-commerce
+                        <span class="badge bg-progress-10 text-primary ms-1" style="background:#dbeafe;">En cours</span>
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="p2" />
+                      <label class="form-check-label" for="p2" style="font-size:.875rem;">
+                        <i class="bi bi-folder2 text-primary me-1"></i>Application mobile
+                        <span class="badge ms-1" style="background:#ede9fe;color:#5b21b6;">En revue</span>
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="p3" />
+                      <label class="form-check-label" for="p3" style="font-size:.875rem;">
+                        <i class="bi bi-folder2 text-primary me-1"></i>Dashboard analytics
+                        <span class="badge ms-1" style="background:#fef3c7;color:#92400e;">À faire</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <hr />
+
+                <!-- Permissions -->
+                <div class="mb-4">
+                  <label class="form-label">Permissions du client</label>
+                  <div class="d-flex flex-column gap-2">
+                    <div class="form-check form-switch">
+                      <input type="checkbox" class="form-check-input" id="perm-view" checked />
+                      <label class="form-check-label" for="perm-view">Consulter le statut des retours</label>
+                    </div>
+                    <div class="form-check form-switch">
+                      <input type="checkbox" class="form-check-input" id="perm-add" checked />
+                      <label class="form-check-label" for="perm-add">Soumettre des retours</label>
+                    </div>
+                    <div class="form-check form-switch">
+                      <input type="checkbox" class="form-check-input" id="perm-comment" checked />
+                      <label class="form-check-label" for="perm-comment">Commenter les retours</label>
+                    </div>
+                    <div class="form-check form-switch">
+                      <input type="checkbox" class="form-check-input" id="perm-screenshot" checked />
+                      <label class="form-check-label" for="perm-screenshot">Joindre des captures d'écran</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex gap-3 justify-content-end">
+                  <a href="clients.html" class="btn btn-outline-secondary px-4">Annuler</a>
+                  <button type="submit" class="btn btn-primary px-4">
+                    <i class="bi bi-send me-1"></i>Enregistrer et inviter
+                  </button>
+                </div>
+
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
